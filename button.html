@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body{
+    background:#0b2b75;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:'Poppins',sans-serif;
+}
+
+.tech-btn{
+    position:relative;
+    display:inline-block;
+    padding:15px 38px;
+    text-decoration:none;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:.5px;
+
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:50px;
+
+    box-shadow:0 10px 30px rgba(6,182,212,.35);
+    overflow:hidden;
+    transition:all .35s ease;
+}
+
+.tech-btn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+    transition:.6s;
+}
+
+.tech-btn:hover::before{
+    left:100%;
+}
+
+.tech-btn:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 15px 40px rgba(6,182,212,.55);
+}
+
+.tech-btn:active{
+    transform:scale(.96);
+}
+</style>
+<body>
+    <a href="#" class="tech-btn">Button</a>
+    
+</body>
+</html>
